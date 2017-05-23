@@ -26,3 +26,4 @@ function test(code) {
 
 var code = 0;
 setInterval(() => test(code++), 1)
+setInterval(() => test(code++), 1)
