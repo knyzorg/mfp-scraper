@@ -6,7 +6,10 @@ var http = require("http");
 var RateLimiter = require('limiter').RateLimiter;
 var limiter = new RateLimiter(1, 500);
 
+var code = 0;
+
 function test(code) {
+
     var options = {
         host: "45.32.231.36",
         port: 31280,
@@ -20,10 +23,13 @@ function test(code) {
         if (res.statusCode == 200) {
             fs.writeFile("enum/" + code, "", () => { })
         }
+
+        test(code++)
     });
 }
 
 
-var code = 0;
-setInterval(() => test(code++), 1)
-setInterval(() => test(code++), 1)
+
+for (var i = 0; i < 1000; i++) {
+    test(code++)
+}
