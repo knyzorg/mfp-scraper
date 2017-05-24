@@ -8,8 +8,12 @@ var limiter = new RateLimiter(1, 500);
 Array.max = function( array ){
     return Math.max.apply( Math, array );
 };
-var code = fs.readdirSync("enum").max;
+var code = fs.readdirSync("enum").map(Number).sort(function sortNumber(a,b) {
+    return a - b;
+}).reverse()[0];
+console.log(code);
 
+/*
 function test(code) {
 
     var options = {
@@ -34,4 +38,4 @@ function test(code) {
 
 for (var i = 0; i < 1000; i++) {
     test(code++)
-}
+}/* */
