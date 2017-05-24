@@ -5,8 +5,10 @@ var fs = require('fs');
 var http = require("http");
 var RateLimiter = require('limiter').RateLimiter;
 var limiter = new RateLimiter(1, 500);
-
-var code = 0;
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
+};
+var code = fs.readdirSync("enum").max;
 
 function test(code) {
 
