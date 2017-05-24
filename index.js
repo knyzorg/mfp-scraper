@@ -17,8 +17,8 @@ console.log(code);
 function test(code) {
 
     var options = {
-        host: "45.32.231.36",
-        port: 31280,
+        /*host: "45.32.231.36",
+        port: 31280,*/
         path: 'http://www.myfitnesspal.com/food/calories/' + code,
         headers: {
             Host: "www.myfitnesspal.com"
