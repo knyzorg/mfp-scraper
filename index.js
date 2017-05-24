@@ -13,7 +13,7 @@ var code = fs.readdirSync("enum").map(Number).sort(function sortNumber(a,b) {
 }).reverse()[0];
 console.log(code);
 
-/*
+
 function test(code) {
 
     var options = {
