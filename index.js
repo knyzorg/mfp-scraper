@@ -8,7 +8,7 @@ var limiter = new RateLimiter(1, 500);
 
 function test(code) {
     var options = {
-        host: "us-wa.proxymesh.com",
+        host: "45.32.231.36",
         port: 31280,
         path: 'http://www.myfitnesspal.com/food/calories/' + code,
         headers: {
